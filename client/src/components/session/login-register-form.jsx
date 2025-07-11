@@ -37,33 +37,37 @@ export default function LoginRegisterForm() {
     return(
         <div className="login-register-form">
 
-            <div className="form-header">
-                {register ? <h2>Cadastro de Usuário</h2> : <h2>Login</h2>}
-            </div>
+            <form>
 
-            <div className="form-inputs">
-                <input type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)}/>
-                <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
+                <div className="form-header">
+                    {register ? <h2>Cadastro de Usuário</h2> : <h2>Login</h2>}
+                </div>
+
+                <div className="form-inputs">
+                    <input type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)}/>
+                    <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
+                    
+                    {register ? <input type="password" placeholder="Confirm Password" onChange={(e) => setConfirmPassword(e.target.value)}/> : "" }
+                </div>
                 
-                {register ? <input type="password" placeholder="Confirm Password" onChange={(e) => setConfirmPassword(e.target.value)}/> : "" }
-            </div>
-            
-            <div className="select-login-register">
-                {register ?
-                    <p onClick={handleDisplayRegister}>Voltar para o login</p>
-                : <p onClick={handleDisplayRegister}>Cadastrar</p>}
-            </div>
-            
+                <div className="select-login-register">
+                    {register ?
+                        <p onClick={handleDisplayRegister}>Voltar para o login</p>
+                    : <p onClick={handleDisplayRegister}>Cadastrar</p>}
+                </div>
+                
 
-            <div className="login-register-buttons">
-                {register ? 
-                    <button className="form-button" onClick={handleDisplayRegister}>Voltar</button>
-                : ""}
+                <div className="login-register-buttons">
+                    {register ? 
+                        <button className="form-button" onClick={handleDisplayRegister}>Voltar</button>
+                    : ""}
 
-                {register ? 
-                    <button className="form-button" onClick={submitNewUser}>Cadastrar</button>
-                : <button className="form-button" onClick={submitLoginUser} >Login</button>}
-            </div>
+                    {register ? 
+                        <button className="form-button" onClick={submitNewUser}>Cadastrar</button>
+                    : <button className="form-button" onClick={submitLoginUser} >Login</button>}
+                </div>
+
+            </form>
         </div>
     )
 }

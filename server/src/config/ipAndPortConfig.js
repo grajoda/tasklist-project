@@ -1,5 +1,5 @@
 
-const defaultPort = 4001
+const defaultPort = 4001;
 
 module.exports = {
     defaultPort
