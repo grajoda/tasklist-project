@@ -1,0 +1,59 @@
+.task {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    margin: 1%;
+    width: 95%;
+    border-radius: 0.7rem;
+}
+
+.task input {
+    /* background-color: aqua; */
+    margin: 0;
+    /* width: 5%; */
+}
+
+.task-date {
+    /* background-color: aqua; */
+    width: 20%;
+}
+
+.task-title {
+    /* background-color: yellow; */
+    width: 20%;
+}
+
+.task-description {
+    /* background-color: yellowgreen; */
+    width: 40%;
+}
+
+.task-menu {
+    /* background-color: violet; */
+    width: 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-menu i {
+    color: rgba(0, 0, 0, 0.399);
+}
+
+.task * {
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .task-menu {
+        /* background-color: blue; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .task-menu i {
+        margin: 20%;
+    }
+}

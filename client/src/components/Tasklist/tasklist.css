@@ -1,0 +1,27 @@
+.tasklist-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tasks-list {
+    background-color: rgb(201, 201, 201);
+    padding: 1%;
+    margin: 2%;
+    width: 70%;
+    height: 25rem;
+    justify-items: center;
+    border-radius: 1rem;
+}
+
+.add-task-button {
+    font-size: 100%;
+    border-radius: 1rem;
+    padding: 1%;
+}
+
+@media (max-width: 800px) {
+    .tasks-list {
+        width: 90%;
+    }
+}
